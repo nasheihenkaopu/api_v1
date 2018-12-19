@@ -15,9 +15,9 @@ return [
     // +----------------------------------------------------------------------
 
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => true,
     // 应用Trace
-    'app_trace'              => false,
+    'app_trace'              => true,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -29,7 +29,7 @@ return [
     // 扩展函数文件
     'extra_file_list'        => [THINK_PATH . 'helper' . EXT],
     // 默认输出类型
-    'default_return_type'    => 'html',
+    'default_return_type'    => 'json',
     // 默认AJAX 数据返回格式,可选json xml ...
     'default_ajax_return'    => 'json',
     // 默认JSONP格式返回的处理方法
@@ -47,7 +47,7 @@ return [
     // 应用类库后缀
     'class_suffix'           => false,
     // 控制器类后缀
-    'controller_suffix'      => false,
+    'controller_suffix'      => true,
 
     // +----------------------------------------------------------------------
     // | 模块设置
@@ -95,7 +95,7 @@ return [
     // 是否开启路由解析缓存
     'route_check_cache'      => false,
     // 是否强制使用路由
-    'url_route_must'         => false,
+    'url_route_must'         => true,
     // 域名部署
     'url_domain_deploy'      => false,
     // 域名根，如thinkphp.cn
@@ -239,5 +239,19 @@ return [
         'type'      => 'bootstrap',
         'var_page'  => 'page',
         'list_rows' => 15,
+    ],
+
+    'aliyun_log'=>[
+        'endpoint'=> 'cn-hongkong.log.aliyuncs.com', // 选择与上面步骤创建 project 所属区域匹配的 Endpoint
+        'accessKeyId'=> 'LTAINKk4s3Xh1ZVb',        // 使用你的阿里云访问秘钥 AccessKeyId
+        'accessKey'=> 'RiVyTOLjcfefO3qAnmB2gTColfHEmk', // 使用你的阿里云访问秘钥 AccessKeySecret
+        'project'=> 'apiv1',                  // 项目名称
+        'logstore'=> 'channel_1',                // 日志库名称
+    ],
+
+    'redis' => [
+        'host' => '127.0.0.1',
+        'port' => '6379',
+        'password' =>''
     ],
 ];
