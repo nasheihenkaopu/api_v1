@@ -10,8 +10,11 @@
 // +----------------------------------------------------------------------
 use think\Route;
 
-Route::post('/','offer/Index/report');
-Route::get('my','offer/Index/repp');
+//渠道
+Route::post('offer/client','offer/Index/client');
+Route::post('offer/service','offer/Index/service');
+//广告主
+Route::post('advertisers/report','advertisers/Index/report');
 
 
 
